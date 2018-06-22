@@ -6,5 +6,3 @@
 #     https: false
 #   )
 # end
-
-GEOCODER_API_KEY: "AIzaSyD6WmUUjhzJJ4XDiqc4Mx1aVBgatKecF40"

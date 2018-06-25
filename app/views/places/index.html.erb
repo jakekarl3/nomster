@@ -3,33 +3,37 @@
   <div class="booyah-box col-10 offset-1">
 
     <h1><%= link_to place.name, place_path(place) %></h1><br />
-    <i><%= place.address %></i><br /><br />
-    <p><%= place.description %></p><br />
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <i><%= place.address %></i><br /><br />
+        <p><%= place.description %></p>
 
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
+        <% if place.user.present? %>
+          <small><%= place.user.email %></small>
+        <% end %>
 
-    <% if place.comments.present? %>
-      <div class="col-12">
-        <blockquote>
-          <% if place.comments.last.humanized_rating.present? %>
-            <b><%= place.comments.last.humanized_rating %></b> -
-          <% end %>
-          <%= place.comments.last.message %>
-          <small><%= place.comments.last.user.email %></small>
-        </blockquote>
+        <% if place.comments.present? %>
+          <div class="col-12 no_padding_left">
+            <blockquote class="blockquote_left">
+              <% if place.comments.last.humanized_rating.present? %>
+                <b><%= place.comments.last.humanized_rating %></b> -
+              <% end %>
+              <%= place.comments.last.message %>
+              <small><%= place.comments.last.user.email %></small>
+            </blockquote>
+          </div>
+        <% end %>
       </div>
-    <% end %>
 
-    <% if place.photos.present? %>
-      <div class="col-12">
-        <% image_tag place.photos.first.picture %>
+      <div class="col-12 col-md-6">
+        <% if place.photos.present? %>
+          <div class="col-12">
+            <%= image_tag place.photos.first.picture %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-
+    </div>
   </div>
-
 <% end %>
 
 <div class="apple_pagination">

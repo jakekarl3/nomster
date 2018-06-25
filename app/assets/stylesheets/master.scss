@@ -46,8 +46,17 @@ body {
   color: #55B9E0;
 }
 
-.navbar-inverse .navbar-toggler {
-  color: #55B9E0;
+.navbar-toggler {
+  border-color: #55B9E0;
+  background-color: #55B9E0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #55B9E0;
+}
+
+a:hover {
+  color: #55B9E0 !important;
 }
 
 .apple_pagination {
@@ -158,4 +167,12 @@ h2 {
 .btn-primary {
   background-color: #55B9E0;
   border-color: #55B9E0;
+}
+
+.no_padding_left {
+  padding-left: 0px;
+}
+
+.blockquote_left {
+  margin-left: 0px;
 }

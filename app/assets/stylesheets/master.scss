@@ -195,5 +195,9 @@ h2 {
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
   max-height: 550px;
-  width: 100%;
+  width: auto;
+}
+
+.carousel-inner img {
+  margin: auto;
 }
